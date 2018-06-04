@@ -1,0 +1,11 @@
+c:\users\relj\source\repos\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\ConfigServices.deps.json
+c:\users\relj\source\repos\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\ConfigServices.runtimeconfig.json
+c:\users\relj\source\repos\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\ConfigServices.runtimeconfig.dev.json
+c:\users\relj\source\repos\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\ConfigServices.dll
+c:\users\relj\source\repos\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\ConfigServices.pdb
+c:\users\relj\source\repos\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\ConfigServices.csprojAssemblyReference.cache
+c:\users\relj\source\repos\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\ConfigServices.csproj.CoreCompileInputs.cache
+c:\users\relj\source\repos\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\ConfigServices.AssemblyInfoInputs.cache
+c:\users\relj\source\repos\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\ConfigServices.AssemblyInfo.cs
+c:\users\relj\source\repos\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\ConfigServices.dll
+c:\users\relj\source\repos\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\ConfigServices.pdb
