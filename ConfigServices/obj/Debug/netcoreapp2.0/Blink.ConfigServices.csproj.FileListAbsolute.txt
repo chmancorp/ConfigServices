@@ -6,3 +6,17 @@ C:\Users\chcorp\Documents\proyecto trabajo\Blink\ConfigServices\ConfigServices\o
 C:\Users\chcorp\Documents\proyecto trabajo\Blink\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.csproj.CoreCompileInputs.cache
 C:\Users\chcorp\Documents\proyecto trabajo\Blink\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.AssemblyInfoInputs.cache
 C:\Users\chcorp\Documents\proyecto trabajo\Blink\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.AssemblyInfo.cs
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.csproj.CoreCompileInputs.cache
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.AssemblyInfoInputs.cache
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.AssemblyInfo.cs
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\Blink.ConfigServices.deps.json
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\Blink.ConfigServices.runtimeconfig.json
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\Blink.ConfigServices.runtimeconfig.dev.json
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\Blink.ConfigServices.dll
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\Blink.ConfigServices.pdb
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.dll
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.pdb
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\Blink.Data.dll
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\bin\Debug\netcoreapp2.0\Blink.Data.pdb
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.csprojAssemblyReference.cache
+C:\Users\relj\Documents\Provident\ConfigServices\ConfigServices\obj\Debug\netcoreapp2.0\Blink.ConfigServices.csproj.CopyComplete
