@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Blink.Data.DataAcces;
-using Blink.Data.Models;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿
 
 namespace Blink.ConfigServices.Controllers
 {
+    using System.Threading.Tasks;
+    using Blink.Data.DataAcces;
+    using Microsoft.AspNetCore.Mvc;
     [Produces("application/json")]
     [Route("api/ConfigServices")]
     public class ConfigServicesController : Controller
@@ -19,6 +15,7 @@ namespace Blink.ConfigServices.Controllers
         {
             _blinkConfigRepository = blinkConfigRepository;
         }
+        [Route("api/ConifgServices/GetIntNumber")]
         [HttpGet]
         public async Task<int> GetIntNumber(int catalogconfigId)
         {
@@ -26,5 +23,31 @@ namespace Blink.ConfigServices.Controllers
             var numData = await _blinkConfigRepository.GetNumIntentsAsync(catalogconfigId);
             return numData;
         }
+
+        [HttpGet]
+        public  Task GetBlockUser()
+        {
+            return null;
+        }
+
+        [HttpGet]
+        public async Task GetCodeAuth()
+        {
+
+        }
+
+        [HttpGet]
+        public async Task GetSystemMessage()
+        {
+
+        }
+
+        [HttpGet]
+        public async Task GetFrequencyRequest()
+        {
+
+        }
+
+   
     }
 }
