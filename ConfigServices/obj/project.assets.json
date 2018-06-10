@@ -93,6 +93,31 @@
           "lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll": {}
         }
       },
+      "Microsoft.AspNet.WebApi.Client/5.2.6": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.1",
+          "Newtonsoft.Json.Bson": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Core/5.2.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.6"
+        },
+        "compile": {
+          "lib/net45/System.Web.Http.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.dll": {}
+        }
+      },
       "Microsoft.AspNetCore/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -1563,7 +1588,7 @@
           "lib/netstandard1.3/Microsoft.CodeAnalysis.Workspaces.dll": {}
         }
       },
-      "Microsoft.CSharp/4.4.0": {
+      "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -1659,10 +1684,10 @@
           "SQLitePCLRaw.bundle_green": "1.1.7"
         }
       },
-      "Microsoft.Data.Sqlite.Core/2.0.1": {
+      "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.7"
+          "SQLitePCLRaw.core": "1.1.11"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
@@ -1723,16 +1748,20 @@
       "Microsoft.EntityFrameworkCore.Analyzers/2.1.0": {
         "type": "package"
       },
-      "Microsoft.EntityFrameworkCore.Design/2.0.3": {
+      "Microsoft.EntityFrameworkCore.Design/2.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.3"
+          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.1.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "build": {
+          "build/netcoreapp2.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.InMemory/2.0.3": {
@@ -1747,12 +1776,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/2.0.3": {
+      "Microsoft.EntityFrameworkCore.Relational/2.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CSharp": "4.4.0",
-          "Microsoft.EntityFrameworkCore": "2.0.3",
-          "Microsoft.Extensions.Configuration.Abstractions": "2.0.2"
+          "Microsoft.EntityFrameworkCore": "2.1.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
@@ -1768,11 +1795,11 @@
           "SQLitePCLRaw.bundle_green": "1.1.7"
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite.Core/2.0.3": {
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "2.0.1",
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.3"
+          "Microsoft.Data.Sqlite.Core": "2.1.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.1.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
@@ -1781,11 +1808,11 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/2.0.3": {
+      "Microsoft.EntityFrameworkCore.SqlServer/2.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.3",
-          "System.Data.SqlClient": "4.4.3"
+          "Microsoft.EntityFrameworkCore.Relational": "2.1.0",
+          "System.Data.SqlClient": "4.5.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -1794,10 +1821,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/2.0.3": {
+      "Microsoft.EntityFrameworkCore.Tools/2.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "2.0.3"
+          "Microsoft.EntityFrameworkCore.Design": "2.1.0"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -2797,12 +2824,12 @@
           "ref/netstandard1.3/_._": {}
         }
       },
-      "Microsoft.Win32.Registry/4.4.0": {
+      "Microsoft.Win32.Registry/4.5.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0",
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0"
+          "System.Memory": "4.5.0",
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
@@ -2811,11 +2838,11 @@
           "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.0/Microsoft.Win32.Registry.dll": {
+          "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "assetType": "runtime",
             "rid": "unix"
           },
-          "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.Registry.dll": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -3157,7 +3184,7 @@
           "lib/netcoreapp/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.7": {
+      "SQLitePCLRaw.core/1.1.11": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -3554,12 +3581,14 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
-      "System.Data.SqlClient/4.4.3": {
+      "System.Data.SqlClient/4.5.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.Registry": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0",
-          "System.Text.Encoding.CodePages": "4.4.0",
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Diagnostics.DiagnosticSource": "4.5.0",
+          "System.Memory": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0",
+          "System.Text.Encoding.CodePages": "4.5.0",
           "runtime.native.System.Data.SqlClient.sni": "4.4.0"
         },
         "compile": {
@@ -4406,11 +4435,11 @@
           "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
         }
       },
-      "System.Security.AccessControl/4.4.0": {
+      "System.Security.AccessControl/4.5.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "System.Security.Principal.Windows": "4.4.0"
+          "System.Security.Principal.Windows": "4.5.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Security.AccessControl.dll": {}
@@ -4419,10 +4448,6 @@
           "lib/netstandard2.0/System.Security.AccessControl.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
           "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -4685,7 +4710,7 @@
           "lib/netstandard1.0/System.Security.Principal.dll": {}
         }
       },
-      "System.Security.Principal.Windows/4.4.0": {
+      "System.Security.Principal.Windows/4.5.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0"
@@ -4756,10 +4781,11 @@
           "ref/netstandard1.3/System.Text.Encoding.dll": {}
         }
       },
-      "System.Text.Encoding.CodePages/4.4.0": {
+      "System.Text.Encoding.CodePages/4.5.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0"
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
         },
         "compile": {
           "ref/netstandard2.0/_._": {}
@@ -5061,7 +5087,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.1.0"
+          "Microsoft.AspNet.WebApi.Core": "5.2.6",
+          "Microsoft.EntityFrameworkCore": "2.1.0",
+          "Microsoft.EntityFrameworkCore.Design": "2.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.0",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.1.0",
+          "Microsoft.EntityFrameworkCore.Tools": "2.1.0",
+          "System.Linq": "4.3.0"
         },
         "compile": {
           "bin/placeholder/Blink.Data.dll": {}
@@ -5140,6 +5172,35 @@
         "lib/netstandard1.6/Microsoft.AI.DependencyCollector.xml",
         "microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512",
         "microsoft.applicationinsights.dependencycollector.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.6": {
+      "sha512": "rMDlyePoxggkmN/qgha1+BR2Uy+dOr38xKCQOPfVNKGY07R2nYJGMTKJFE1XFgwD70RYUNazf2fqutjJF18XgQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.client/5.2.6",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/System.Net.Http.Formatting.dll",
+        "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/netstandard2.0/System.Net.Http.Formatting.dll",
+        "lib/netstandard2.0/System.Net.Http.Formatting.xml",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
+        "microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
+        "microsoft.aspnet.webapi.client.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.Core/5.2.6": {
+      "sha512": "QMFixs/MvKZXjfUbV0gXxF85LKi+keu/zJKv13upg/JlcxJ+wdLSYzyHO/sgPPUuFVstgndK6Zt3VduWeqFmHQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.webapi.core/5.2.6",
+      "files": [
+        ".signature.p7s",
+        "Content/web.config.transform",
+        "lib/net45/System.Web.Http.dll",
+        "lib/net45/System.Web.Http.xml",
+        "microsoft.aspnet.webapi.core.5.2.6.nupkg.sha512",
+        "microsoft.aspnet.webapi.core.nuspec"
       ]
     },
     "Microsoft.AspNetCore/2.0.3": {
@@ -6192,17 +6253,17 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
-      "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
+      "sha512": "tuzFD+JsyLNZRKdnlvW6XbPwIT5WH2ChcPhrCMAJP5RjBCA4O2LgPhExbMZB5DuNgXSmuBgpDhXjWp77uDfOsw==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/1.1.0",
       "files": [
-        "Microsoft.CodeAnalysis.Analyzers.1.1.0.nupkg.sha512",
-        "Microsoft.CodeAnalysis.Analyzers.nuspec",
         "ThirdPartyNotices.rtf",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Analyzers.dll",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.Analyzers.dll",
         "analyzers/dotnet/vb/Microsoft.CodeAnalysis.Analyzers.dll",
         "analyzers/dotnet/vb/Microsoft.CodeAnalysis.VisualBasic.Analyzers.dll",
+        "microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
+        "microsoft.codeanalysis.analyzers.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
@@ -6269,11 +6330,12 @@
         "microsoft.codeanalysis.workspaces.common.nuspec"
       ]
     },
-    "Microsoft.CSharp/4.4.0": {
-      "sha512": "vvVR/B08YVghQ4jHEloxqw2ZWzEGE1AOA5E0DioUM3ujbXz6FD3AfB/0Jl2ohJPd0nXYGwmPe1En6HTsSriq1A==",
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "EGoBmf3Na2ppbhPePDE9PlX81r1HuOZH5twBrq7couJZiPTjUnD3648balerQJO6EJ8Sj+43+XuRwQ7r+3tE3w==",
       "type": "package",
-      "path": "microsoft.csharp/4.4.0",
+      "path": "microsoft.csharp/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -6284,6 +6346,7 @@
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
         "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
         "lib/win8/_._",
         "lib/wp80/_._",
         "lib/wpa81/_._",
@@ -6291,7 +6354,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.4.0.nupkg.sha512",
+        "microsoft.csharp.4.5.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -6322,6 +6385,7 @@
         "ref/netstandard2.0/Microsoft.CSharp.dll",
         "ref/netstandard2.0/Microsoft.CSharp.xml",
         "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
         "ref/win8/_._",
         "ref/wp80/_._",
         "ref/wpa81/_._",
@@ -6470,14 +6534,15 @@
         "microsoft.data.sqlite.nuspec"
       ]
     },
-    "Microsoft.Data.Sqlite.Core/2.0.1": {
-      "sha512": "lkUOJRJEXnXAxWKhCSFjYKLhuopw+m6ClML4cF1Rt/Ek8bBUW6hn1xAHCZ9KFqkcNOpBS7rQ6nZBaSXU3mgbOQ==",
+    "Microsoft.Data.Sqlite.Core/2.1.0": {
+      "sha512": "OzFBXsbsjkNLqClNyBA8ldv3oLYK37JxP2c83xVe7UcxU2KvvqQy+VvQg97rEcMsZPgS4t3pTAv4W7xwaoYuug==",
       "type": "package",
-      "path": "microsoft.data.sqlite.core/2.0.1",
+      "path": "microsoft.data.sqlite.core/2.1.0",
       "files": [
+        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
-        "microsoft.data.sqlite.core.2.0.1.nupkg.sha512",
+        "microsoft.data.sqlite.core.2.1.0.nupkg.sha512",
         "microsoft.data.sqlite.core.nuspec"
       ]
     },
@@ -6529,17 +6594,19 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Design/2.0.3": {
-      "sha512": "hWmbmZg0BhXD3/zuR/w3tCfLyPHpQ52GRPKt80vSmnFOnqaa+/Di7v0zOfPQMmn9gXiZ0hAtx5ywvwRNCTCzBg==",
+    "Microsoft.EntityFrameworkCore.Design/2.1.0": {
+      "sha512": "Y9Pvh2kZPWjoy/XB1/iGoGHHd75p+ILRPZZwxDCHEavUbDpcyyEEFSnZEn0HOBtrVh8TrZEmrCBMtKXEyFiAfA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.design/2.0.3",
+      "path": "microsoft.entityframeworkcore.design/2.1.0",
       "files": [
         ".signature.p7s",
+        "build/net461/Microsoft.EntityFrameworkCore.Design.props",
+        "build/netcoreapp2.0/Microsoft.EntityFrameworkCore.Design.props",
         "lib/net461/Microsoft.EntityFrameworkCore.Design.dll",
         "lib/net461/Microsoft.EntityFrameworkCore.Design.xml",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.xml",
-        "microsoft.entityframeworkcore.design.2.0.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.2.1.0.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
@@ -6555,15 +6622,15 @@
         "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/2.0.3": {
-      "sha512": "fXOrHnoXUzdVc2S+NsdGcT963hbgQ3DdF9e+anB21b36HIQM0ZcLrPyI8fC5lQA9T1sFuKQ/tKvbShzm/0aWWw==",
+    "Microsoft.EntityFrameworkCore.Relational/2.1.0": {
+      "sha512": "Ln85yWfr4verWw/yFwT8cmO+DxJneXk9TKjFeG92jMb7rVsv19i1l8OCPyqfy8r8m1iYRBg/0kTQHYprmBiMoA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/2.0.3",
+      "path": "microsoft.entityframeworkcore.relational/2.1.0",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.2.0.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.2.1.0.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
@@ -6577,38 +6644,38 @@
         "microsoft.entityframeworkcore.sqlite.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Sqlite.Core/2.0.3": {
-      "sha512": "8aw71keGpBNEjnKC6fTLP+Uid2Z4I24bF3zf4AwWFigdwQ0bCsz+RcflDQkLiBqV67f34Sf6f1CLM8bq8aW4fw==",
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/2.1.0": {
+      "sha512": "wGbA0y52RPLXL25615M2soi2ggbbNJy5cUZfTa0AJJa0iSIQPiNGpeJOlxfPyjF9dAbt3di4+W4DULa39sYgJg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite.core/2.0.3",
+      "path": "microsoft.entityframeworkcore.sqlite.core/2.1.0",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.xml",
-        "microsoft.entityframeworkcore.sqlite.core.2.0.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.core.2.1.0.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/2.0.3": {
-      "sha512": "kbYgPZxFIs3Mlz6AdOA+/RrS28o1ehyoRP2RzbEdG8NkqO2lHbMPTBHFmQAlOVLlb2XBOaj96SMtwjRuRruuSg==",
+    "Microsoft.EntityFrameworkCore.SqlServer/2.1.0": {
+      "sha512": "5pW/jbSlujgbE4HCZ5mFHXOJ+hhjwZukbmDI2VMNXNODXtUCFNSudsrTtJg3V3WZGHChnLVCrzFBJBPPkW9pBg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver/2.0.3",
+      "path": "microsoft.entityframeworkcore.sqlserver/2.1.0",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
-        "microsoft.entityframeworkcore.sqlserver.2.0.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.2.1.0.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/2.0.3": {
-      "sha512": "KOkhbzPTFJa/NEduIdT8o1vOKUZAVvcfyR5rFIKUvFGSSEU2tkmEkJ0ZFxZzpbltD7cj03DlvMlB83RTyYraPg==",
+    "Microsoft.EntityFrameworkCore.Tools/2.1.0": {
+      "sha512": "CDHXDMERYlbn0cRYlh2x6GXRttXabqB7jvhtVDhaYKGs08LL+QE/f09ubGM8D9soiC/AVHoWgnbyMSiTzdsRcA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/2.0.3",
+      "path": "microsoft.entityframeworkcore.tools/2.1.0",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.tools.2.0.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.2.1.0.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PowerShell2.psd1",
         "tools/EntityFrameworkCore.PowerShell2.psm1",
@@ -6617,12 +6684,10 @@
         "tools/about_EntityFrameworkCore.help.txt",
         "tools/init.ps1",
         "tools/install.ps1",
-        "tools/net461/ef.exe",
-        "tools/net461/ef.exe.config",
-        "tools/net461/ef.x86.exe",
-        "tools/net461/ef.x86.exe.config",
-        "tools/netcoreapp2.0/ef.dll",
-        "tools/netcoreapp2.0/ef.runtimeconfig.json"
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/2.1.0": {
@@ -7995,18 +8060,19 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.Win32.Registry/4.4.0": {
-      "sha512": "dA36TlNVn/XfrZtmf0fiI/z1nd3Wfp2QVzTdj26pqgP9LFWq0i1hYEUAW50xUjGFYn1+/cP3KGuxT2Yn1OUNBQ==",
+    "Microsoft.Win32.Registry/4.5.0": {
+      "sha512": "vduxuHEqRgRrTE8wYG8Wxj/+6wwzddOmZzjKZx6rFMc/91aUBxI5etAFYxesoNaIja5NpgSTcnk6cN8BeYXf9A==",
       "type": "package",
-      "path": "microsoft.win32.registry/4.4.0",
+      "path": "microsoft.win32.registry/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/Microsoft.Win32.Registry.dll",
         "lib/net461/Microsoft.Win32.Registry.dll",
         "lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "lib/netstandard2.0/Microsoft.Win32.Registry.dll",
-        "microsoft.win32.registry.4.4.0.nupkg.sha512",
+        "microsoft.win32.registry.4.5.0.nupkg.sha512",
         "microsoft.win32.registry.nuspec",
         "ref/net46/Microsoft.Win32.Registry.dll",
         "ref/net461/Microsoft.Win32.Registry.dll",
@@ -8024,11 +8090,11 @@
         "ref/netstandard1.3/zh-hant/Microsoft.Win32.Registry.xml",
         "ref/netstandard2.0/Microsoft.Win32.Registry.dll",
         "ref/netstandard2.0/Microsoft.Win32.Registry.xml",
-        "runtimes/unix/lib/netcoreapp2.0/Microsoft.Win32.Registry.dll",
+        "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll",
-        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -8536,10 +8602,10 @@
         "sqlitepclraw.bundle_green.nuspec"
       ]
     },
-    "SQLitePCLRaw.core/1.1.7": {
-      "sha512": "u9k9ZFkyTU6CVyXWpRuuXOvKi/cy/xt1oGKVSW8aUKcTL4RdH34yFNtVykEeiR68ojIEvmoZfL51h/xx2IQk5g==",
+    "SQLitePCLRaw.core/1.1.11": {
+      "sha512": "QT17CyQAQIbTCu6pW5+uVA8BXqRzquiDI1tr5Un6c1YZcQydPmGPuYYng9xMs2UHUDYHbTu+JDkp55WR+qo9bQ==",
       "type": "package",
-      "path": "sqlitepclraw.core/1.1.7",
+      "path": "sqlitepclraw.core/1.1.11",
       "files": [
         "lib/MonoAndroid/SQLitePCLRaw.core.dll",
         "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
@@ -8556,7 +8622,7 @@
         "lib/win8/SQLitePCLRaw.core.dll",
         "lib/win81/SQLitePCLRaw.core.dll",
         "lib/wpa81/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.1.1.7.nupkg.sha512",
+        "sqlitepclraw.core.1.1.11.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
       ]
     },
@@ -9278,11 +9344,12 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "System.Data.SqlClient/4.4.3": {
-      "sha512": "D1hEOS1oPLJ6WcGCzpTWe8SauWVxnDoDTUWhv5XCNdRm/QeSUk4BQ3ZDe7BH+zNVHDBkPYjVzpVjnCl43eOSGg==",
+    "System.Data.SqlClient/4.5.0": {
+      "sha512": "q6xYImrsNz+WZCa4/zvgUUihMQUxdI3S6e2gPsCA8TB8Ott7/frxxoeIoyjp3dsmvolA9StFD/Ib6tDPf5sHVA==",
       "type": "package",
-      "path": "system.data.sqlclient/4.4.3",
+      "path": "system.data.sqlclient/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -9290,6 +9357,7 @@
         "lib/net451/System.Data.SqlClient.dll",
         "lib/net46/System.Data.SqlClient.dll",
         "lib/net461/System.Data.SqlClient.dll",
+        "lib/netcoreapp2.1/System.Data.SqlClient.dll",
         "lib/netstandard1.2/System.Data.SqlClient.dll",
         "lib/netstandard1.3/System.Data.SqlClient.dll",
         "lib/netstandard2.0/System.Data.SqlClient.dll",
@@ -9303,6 +9371,8 @@
         "ref/net46/System.Data.SqlClient.dll",
         "ref/net461/System.Data.SqlClient.dll",
         "ref/net461/System.Data.SqlClient.xml",
+        "ref/netcoreapp2.1/System.Data.SqlClient.dll",
+        "ref/netcoreapp2.1/System.Data.SqlClient.xml",
         "ref/netstandard1.2/System.Data.SqlClient.dll",
         "ref/netstandard1.2/System.Data.SqlClient.xml",
         "ref/netstandard1.2/de/System.Data.SqlClient.xml",
@@ -9331,14 +9401,18 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll",
         "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
         "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
         "runtimes/win/lib/net451/System.Data.SqlClient.dll",
         "runtimes/win/lib/net46/System.Data.SqlClient.dll",
         "runtimes/win/lib/net461/System.Data.SqlClient.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
         "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
-        "system.data.sqlclient.4.4.3.nupkg.sha512",
+        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
+        "runtimes/win/lib/uap10.0.16300/System.Data.SqlClient.dll",
+        "system.data.sqlclient.4.5.0.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -10384,12 +10458,10 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "jfaGQE1ybJez2vUpv9ZAGiBdqNNTYZmzd2Fl/p6YMM9rlbq3OWT7rNYs+ZUUO7s2LbblG4sjaut5XP+MBDKymA==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
-        "System.Linq.Queryable.4.0.1.nupkg.sha512",
-        "System.Linq.Queryable.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/monoandroid10/_._",
@@ -10437,7 +10509,9 @@
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._"
+        "ref/xamarinwatchos10/_._",
+        "system.linq.queryable.4.0.1.nupkg.sha512",
+        "system.linq.queryable.nuspec"
       ]
     },
     "System.Memory/4.5.0": {
@@ -11876,17 +11950,19 @@
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
-    "System.Security.AccessControl/4.4.0": {
-      "sha512": "2NRFPX/V81ucKQmqNgGBZrKGH/5ejsvivSGMRum0SMgPnJxwhuNkzVS1+7gC3R2X0f57CtwrPrXPPSe6nOp82g==",
+    "System.Security.AccessControl/4.5.0": {
+      "sha512": "aVjTe36YkO8FzfNhMLoPEzv3gF9rphoW9ngFhG/MH4zzEPLx07sNrgCLwMP4Wx2leI6qarMrGv21OwQXYUKLmw==",
       "type": "package",
-      "path": "system.security.accesscontrol/4.4.0",
+      "path": "system.security.accesscontrol/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/System.Security.AccessControl.dll",
         "lib/net461/System.Security.AccessControl.dll",
         "lib/netstandard1.3/System.Security.AccessControl.dll",
         "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/uap10.0.16299/_._",
         "ref/net46/System.Security.AccessControl.dll",
         "ref/net461/System.Security.AccessControl.dll",
         "ref/net461/System.Security.AccessControl.xml",
@@ -11903,12 +11979,13 @@
         "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
         "ref/netstandard2.0/System.Security.AccessControl.dll",
         "ref/netstandard2.0/System.Security.AccessControl.xml",
-        "runtimes/unix/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "ref/uap10.0.16299/_._",
         "runtimes/win/lib/net46/System.Security.AccessControl.dll",
         "runtimes/win/lib/net461/System.Security.AccessControl.dll",
         "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
         "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
-        "system.security.accesscontrol.4.4.0.nupkg.sha512",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.accesscontrol.4.5.0.nupkg.sha512",
         "system.security.accesscontrol.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12181,7 +12258,7 @@
       ]
     },
     "System.Security.Cryptography.Xml/4.4.2": {
-      "sha512": "q9Dren/YP5jhRCkDvLfuaPpMTQzP97ANvzq/OoGgwK8YdLRSTABS9oW5/23OKoM2DRCuBrh4qaecD2YNhPtuzQ==",
+      "sha512": "1m+fKVrApgKYMRuE0MF0vGjqy4XqAp1rCtyAzMXhJajMDDytMh/rHk9hp4M7KKk3QQZoWJUvyUY7xcw74w+JiQ==",
       "type": "package",
       "path": "system.security.cryptography.xml/4.4.2",
       "files": [
@@ -12256,17 +12333,19 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "System.Security.Principal.Windows/4.4.0": {
-      "sha512": "pP+AOzt1o3jESOuLmf52YQTF7H3Ng9hTnrOESQiqsnl2IbBh1HInsAMHYtoh75iUYV0OIkHmjvveraYB6zM97w==",
+    "System.Security.Principal.Windows/4.5.0": {
+      "sha512": "WA9ETb/pY3BjnxKjBUHEgO59B7d/nnmjHFsqjJ2eDT780nD769CT1/bw2ia0Z6W7NqlcqokE6sKGKa6uw88XGA==",
       "type": "package",
-      "path": "system.security.principal.windows/4.4.0",
+      "path": "system.security.principal.windows/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/System.Security.Principal.Windows.dll",
         "lib/net461/System.Security.Principal.Windows.dll",
         "lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/uap10.0.16299/_._",
         "ref/net46/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.xml",
@@ -12283,12 +12362,14 @@
         "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
         "ref/netstandard2.0/System.Security.Principal.Windows.dll",
         "ref/netstandard2.0/System.Security.Principal.Windows.xml",
+        "ref/uap10.0.16299/_._",
         "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
-        "system.security.principal.windows.4.4.0.nupkg.sha512",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.principal.windows.4.5.0.nupkg.sha512",
         "system.security.principal.windows.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12424,11 +12505,12 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "System.Text.Encoding.CodePages/4.4.0": {
-      "sha512": "6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
+    "System.Text.Encoding.CodePages/4.5.0": {
+      "sha512": "16EVkWmNnoH3/Yj9c5s5VuLK5Uv/Dnkc3P2kMmnD7wJcUuvcHVvM2IhVJanf2hHRZUitH+cIkPCPHrBoCXc7Rw==",
       "type": "package",
-      "path": "system.text.encoding.codepages/4.4.0",
+      "path": "system.text.encoding.codepages/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -12464,7 +12546,7 @@
         "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "system.text.encoding.codepages.4.4.0.nupkg.sha512",
+        "system.text.encoding.codepages.4.5.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -13374,23 +13456,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\relj\\.nuget\\packages\\": {},
+    "C:\\Users\\chcorp\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\relj\\Documents\\Provident\\ConfigServices\\ConfigServices\\Blink.ConfigServices.csproj",
+      "projectUniqueName": "C:\\Users\\chcorp\\Documents\\proyecto trabajo\\ConfigService\\ConfigServices\\ConfigServices\\Blink.ConfigServices.csproj",
       "projectName": "Blink.ConfigServices",
-      "projectPath": "C:\\Users\\relj\\Documents\\Provident\\ConfigServices\\ConfigServices\\Blink.ConfigServices.csproj",
-      "packagesPath": "C:\\Users\\relj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\relj\\Documents\\Provident\\ConfigServices\\ConfigServices\\obj\\",
+      "projectPath": "C:\\Users\\chcorp\\Documents\\proyecto trabajo\\ConfigService\\ConfigServices\\ConfigServices\\Blink.ConfigServices.csproj",
+      "packagesPath": "C:\\Users\\chcorp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chcorp\\Documents\\proyecto trabajo\\ConfigService\\ConfigServices\\ConfigServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\relj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chcorp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13403,8 +13485,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\relj\\Documents\\Provident\\ConfigServices\\Blink.Data\\Blink.Data.csproj": {
-              "projectPath": "C:\\Users\\relj\\Documents\\Provident\\ConfigServices\\Blink.Data\\Blink.Data.csproj"
+            "C:\\Users\\chcorp\\Documents\\proyecto trabajo\\ConfigService\\ConfigServices\\Blink.Data\\Blink.Data.csproj": {
+              "projectPath": "C:\\Users\\chcorp\\Documents\\proyecto trabajo\\ConfigService\\ConfigServices\\Blink.Data\\Blink.Data.csproj"
             }
           }
         }
@@ -13443,5 +13525,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.AspNet.WebApi.Core 5.2.6\" se restauró con \".NETFramework,Version=v4.6.1\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v2.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.AspNet.WebApi.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

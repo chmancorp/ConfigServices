@@ -7,3 +7,14 @@ C:\Users\relj\Documents\Provident\ConfigServices\Blink.Data\bin\Debug\netcoreapp
 C:\Users\relj\Documents\Provident\ConfigServices\Blink.Data\bin\Debug\netcoreapp2.0\Blink.Data.pdb
 C:\Users\relj\Documents\Provident\ConfigServices\Blink.Data\obj\Debug\netcoreapp2.0\Blink.Data.dll
 C:\Users\relj\Documents\Provident\ConfigServices\Blink.Data\obj\Debug\netcoreapp2.0\Blink.Data.pdb
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\bin\Debug\netcoreapp2.0\Blink.Data.deps.json
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\bin\Debug\netcoreapp2.0\Blink.Data.dll
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\bin\Debug\netcoreapp2.0\Blink.Data.pdb
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\obj\Debug\netcoreapp2.0\Blink.Data.csprojResolveAssemblyReference.cache
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\obj\Debug\netcoreapp2.0\Blink.Data.csproj.CoreCompileInputs.cache
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\obj\Debug\netcoreapp2.0\Blink.Data.AssemblyInfoInputs.cache
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\obj\Debug\netcoreapp2.0\Blink.Data.AssemblyInfo.cs
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\obj\Debug\netcoreapp2.0\Blink.Data.dll
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\obj\Debug\netcoreapp2.0\Blink.Data.pdb
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\bin\Debug\netcoreapp2.0\Blink.Data.runtimeconfig.json
+C:\Users\chcorp\Documents\proyecto trabajo\ConfigService\ConfigServices\Blink.Data\bin\Debug\netcoreapp2.0\Blink.Data.runtimeconfig.dev.json

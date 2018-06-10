@@ -8,8 +8,17 @@ namespace Blink.Data.UnitOfWork
 {
     public class ConfigUnit : IConfigUnit
     {
+        private ConfigServiceDataBaseContext _dbContext;
+        public ConfigUnit(ConfigServiceDataBaseContext dbContext)
+        {
+            _dbContext = dbContext;
+            BlinkConfigRepository = new BlinkConfigRepository(dbContext);
 
-        public IBlinkConfigRepository BlinkConfigRepository => throw new NotImplementedException();
+        }
+        public IBlinkConfigRepository BlinkConfigRepository
+        {
+            get; private set;
+        }
 
         public Task Complete()
         {
@@ -18,7 +27,7 @@ namespace Blink.Data.UnitOfWork
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _dbContext.Dispose();
         }
     }
 }
